@@ -1,0 +1,38 @@
+{
+  "name": "vue-ssr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./server/index.js",
+    "buildCc": "webpack --config ./config/webpack.client.config.js --colors --progress",
+    "buildSs": "webpack --config ./config/webpack.server.config.js --colors --progress",
+    "build": "npm-run-all -p buildCc buildSs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.3",
+    "vue-router": "^3.3.4",
+    "vue-server-renderer": "^2.6.11",
+    "vuex": "^3.5.1",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "colors": "^1.4.0",
+    "html-webpack-plugin": "^4.3.0",
+    "npm-run-all": "^4.1.5",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9",
+    "webpack-node-externals": "^2.5.0"
+  }
+}
